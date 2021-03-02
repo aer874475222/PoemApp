@@ -18,7 +18,7 @@ class PoemViewbinder : ItemViewBinder<PoemBean, PoemViewbinder.ViewHolder>() {
         holder.itemView.tvTitle.text = "标题：${itemData?.title.trim()}"
         holder.itemView.tvWriter.text = "作者：${itemData?.writer.trim()}"
         holder.itemView.tvContent.text = "内容：${itemData?.content.trim()}"
-        println(itemData?.content.trim())
+       // println(itemData?.content.trim())
 
     }
 

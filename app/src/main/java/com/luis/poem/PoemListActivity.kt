@@ -64,9 +64,7 @@ class PoemListActivity : BasePagingActivity<PoemListContract.IPresenter>(), Poem
             mList.add(gson.fromJson(jsonElement, PoemBean::class.java))
         }
 
-
         for (value in mList) {
-            println(value._id.`$oid`)
             if (GreenDaoManager.getInstance(this@PoemListActivity).findPoemByOid(value._id.`$oid`).isEmpty()) {
                 GreenDaoManager.getInstance(this@PoemListActivity).addPoem(value)
             }
